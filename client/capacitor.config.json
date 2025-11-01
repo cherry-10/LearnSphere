@@ -1,0 +1,17 @@
+{
+  "appId": "com.learnsphere.app",
+  "appName": "LearnSphere",
+  "webDir": "build",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#3b82f6",
+      "showSpinner": false
+    }
+  }
+}
