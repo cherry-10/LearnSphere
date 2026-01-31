@@ -19,6 +19,7 @@ const CoursesPage = () => {
 
   useEffect(() => {
     filterCourses();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [courses, searchTerm, selectedCategory, selectedLevel]);
 
   const fetchCourses = async () => {
