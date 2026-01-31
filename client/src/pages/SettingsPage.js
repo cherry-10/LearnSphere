@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useAuth } from '../context/AuthContext';
-import { User, Mail, Lock, Bell, Globe, Shield, Trash2 } from 'lucide-react';
+import { User, Lock, Bell, Trash2 } from 'lucide-react';
 
 const SettingsPage = () => {
   const { user } = useAuth();

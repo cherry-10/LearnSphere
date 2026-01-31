@@ -24,14 +24,6 @@ const MyCoursesPage = () => {
     }
   };
 
-  const updateProgress = async (courseId, newProgress) => {
-    try {
-      await axios.put(`/api/user/progress/${courseId}`, { progress: newProgress });
-      fetchEnrolledCourses();
-    } catch (error) {
-      console.error('Error updating progress:', error);
-    }
-  };
 
   if (loading) {
     return (

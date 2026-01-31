@@ -4,7 +4,7 @@ import axios from 'axios';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useAuth } from '../context/AuthContext';
-import { Star, Users, Clock, Award, CheckCircle, BookOpen, Play } from 'lucide-react';
+import { Star, Clock, Award, CheckCircle, BookOpen, Play } from 'lucide-react';
 
 const CourseInfoPage = () => {
   const { courseId } = useParams();
@@ -12,7 +12,7 @@ const CourseInfoPage = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [loading, setLoading] = useState(true);
   const [enrolling, setEnrolling] = useState(false);
-  const { isAuthenticated, user } = useAuth();
+  const { isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
