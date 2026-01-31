@@ -1,71 +1,57 @@
-# Learn Sphere - Education Platform
+# Learn Sphere - Education Platform Demo
 
-A complete, responsive education web application similar to Great Learning, featuring sign-up, login, course catalog, and learner analytics.
+A responsive education web application demo showcasing modern UI/UX for online learning platforms.
 
 ## Features
 
-- 🔐 User Authentication (Sign Up / Login with JWT)
 - 📚 Comprehensive Course Catalog
-- 📊 Learner Analytics and Progress Tracking
 - 🎓 Detailed Course Information with Modules
 - 💻 Responsive Design (Mobile, Tablet, Desktop)
 - ⭐ Rating System
 - 🎨 Modern UI with Tailwind CSS
+- 🚀 Static Demo (No backend required)
 
 ## Tech Stack
 
 - **Frontend**: React 18, React Router, Tailwind CSS, Lucide Icons
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB with Mongoose
-- **Authentication**: JWT (JSON Web Tokens)
+- **Deployment**: Vercel
 
-## Installation
+## Quick Start
 
 ### Prerequisites
 
 - Node.js (v14 or higher)
-- MongoDB (local or Atlas)
 - npm or yarn
 
-### Setup Instructions
+### Local Development
 
 1. **Clone the repository**
    ```bash
-   cd application
+   git clone https://github.com/cherry-10/LearnSphere
+   cd LearnSphere
    ```
 
 2. **Install dependencies**
    ```bash
-   npm run install-all
+   npm install
    ```
 
-3. **Configure environment variables**
-   - Edit `.env` file in the root directory
-   - Update `MONGODB_URI` with your MongoDB connection string
-   - Change `JWT_SECRET` to a secure random string
-
-4. **Start MongoDB**
+3. **Run the application**
    ```bash
-   # If using local MongoDB
-   mongod
+   npm start
    ```
 
-5. **Run the application**
-   ```bash
-   # Development mode (both frontend and backend)
-   npm run dev
-
-   # Or run separately:
-   # Backend only
-   npm run server
-
-   # Frontend only (in client directory)
-   cd client && npm start
-   ```
-
-6. **Access the application**
+4. **Access the application**
    - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5000
+
+## Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/cherry-10/LearnSphere)
+
+1. Click the "Deploy" button above
+2. Import your repository
+3. Vercel will automatically detect the configuration
+4. Click "Deploy"
 
 ## Available Courses
 
@@ -80,44 +66,17 @@ A complete, responsive education web application similar to Great Learning, feat
 ## Project Structure
 
 ```
-learn-sphere/
+LearnSphere/
 ├── client/                 # React frontend
 │   ├── public/
 │   ├── src/
 │   │   ├── components/    # React components
 │   │   ├── pages/         # Page components
 │   │   ├── context/       # Context API
-│   │   ├── utils/         # Utility functions
 │   │   └── data/          # Course data
-├── server/                # Express backend
-│   ├── models/           # MongoDB models
-│   ├── routes/           # API routes
-│   ├── middleware/       # Custom middleware
-│   └── index.js          # Server entry point
+├── vercel.json            # Vercel configuration
 └── package.json
 ```
-
-## API Endpoints
-
-### Authentication
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - Login user
-- `GET /api/auth/me` - Get current user
-
-### Courses
-- `GET /api/courses` - Get all courses
-- `GET /api/courses/:id` - Get course by ID
-- `POST /api/courses/:id/enroll` - Enroll in course (protected)
-
-### User
-- `GET /api/user/enrolled` - Get enrolled courses (protected)
-- `PUT /api/user/progress/:courseId` - Update course progress (protected)
-
-## Default Credentials (for testing)
-
-After running the seed script:
-- Email: student@learnsphere.com
-- Password: Student123!
 
 ## License
 
